@@ -1,0 +1,50 @@
+# ORT repository configuration for the Moodle 4.1.22 compliance analysis.
+#
+# This branch (ort/4.1.22) is tag v4.1.22 plus this file, and nothing else.
+# It exists only because .ort.yml cannot be committed to a tag. The analysed
+# tree is otherwise byte-identical to the Moodle 4.1.22 release, commit
+# df1157bb845eabedd31989d6a1a6e18f638ff890.
+#
+# Target rationale: mediamaisteri/moodle-block_mmquicklink declares
+# "moodle/moodle": "~4.1.0", which resolves to v4.1.22 — the final 4.1
+# release, 4.1 LTS security support having ended 2025-12-08. Analysing this
+# exact revision keeps this standalone Moodle analysis aligned with the
+# plugin's SBOM reference, pkg:composer/moodle/moodle@v4.1.22.
+#
+# No curations.licenseFindings are defined yet, deliberately. Those should be
+# added reactively to correct actual scanner misdetections, not written
+# speculatively before any scan results exist.
+
+excludes:
+  paths:
+    - pattern: "**/tests/**"
+      reason: "TEST_OF"
+      comment: >-
+        Unit test code and test-only support files, distributed throughout the
+        Moodle tree (approximately 3,678 files at this revision). Not part of
+        the functional surface of a deployed Moodle for compliance purposes.
+
+    - pattern: "**/behat/**"
+      reason: "TEST_OF"
+      comment: >-
+        Behat acceptance-test infrastructure (approximately 1,464 files at this
+        revision). CAVEAT: this also excludes lib/behat/axe, which vendors
+        axe-core 4.5.1 under MPL-2.0 as declared in lib/thirdpartylibs.xml. If
+        the vendored third-party inventory is required to cover test tooling as
+        well, narrow or remove this entry.
+
+    - pattern: "**/fixtures/**"
+      reason: "TEST_OF"
+      comment: >-
+        Test fixture data (approximately 518 files at this revision). Fixtures
+        frequently embed sample licence texts and headers, which the scanner
+        reports as findings against files that are not shipped code.
+
+  scopes:
+    - pattern: "require-dev"
+      reason: "DEV_DEPENDENCY_OF"
+      comment: >-
+        Composer development dependencies — PHPUnit, Behat, Mink,
+        symfony/process, vfsstream and their transitive dependencies. Moodle
+        commits composer.lock, so these resolve into a complete package tree,
+        but none of them are distributed as part of Moodle itself.
