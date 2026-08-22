@@ -40,6 +40,32 @@ excludes:
         frequently embed sample licence texts and headers, which the scanner
         reports as findings against files that are not shipped code.
 
+    - pattern: "package.json"
+      reason: "BUILD_TOOL_OF"
+      comment: >-
+        Moodle's root npm manifest. It declares zero runtime "dependencies" and
+        39 "devDependencies" — Grunt, ESLint, Stylelint and related build and
+        lint tooling. None of it is distributed with Moodle; the JavaScript that
+        ships is committed to the tree as AMD modules and built artifacts.
+        Excluding the manifest stops ORT treating it as a project and running
+        `npm ci` against it, which currently fails and produces ~50 ERROR issues.
+        The excluded manifest does not remove any JavaScript source from the
+        scan — those files belong to the root Moodle project.
+
+    - pattern: "**/vendor/**/composer.json"
+      reason: "OTHER"
+      comment: >-
+        Composer manifests belonging to vendored third-party libraries whose
+        code is committed to the Moodle tree (9 manifests under auth/cas and
+        lib/phpspreadsheet). Moodle never runs Composer against these; the
+        libraries ship as committed source. Resolving them network-fetches
+        dependency metadata that does not reflect what Moodle actually
+        distributes — for example phpoffice/phpspreadsheet requires
+        dompdf/dompdf, which Moodle deliberately does not vendor, so resolution
+        would introduce a package that is not present in the tree at all.
+        Excluding only the manifest files leaves the vendored source itself in
+        the root Moodle project, so it is still scanned for licences.
+
   scopes:
     - pattern: "require-dev"
       reason: "DEV_DEPENDENCY_OF"
