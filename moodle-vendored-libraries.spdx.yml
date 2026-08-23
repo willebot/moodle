@@ -1,0 +1,1411 @@
+# Vendored third-party libraries of Moodle 4.1.22.
+#
+# WHY THIS FILE EXISTS
+# Moodle does not use Composer or npm for its runtime dependencies. It vendors
+# third-party libraries directly into its source tree, so ORT's analyzer sees
+# them as plain files or as projects -- never as packages. The advisor only
+# queries packages, so none of this code was reachable for vulnerability
+# monitoring. This document declares each vendored library as an SPDX package
+# carrying a PURL, which ORT's SpdxDocumentFile analyzer turns into a real ORT
+# package that the advisor can then look up.
+#
+# REQUIRED ANALYZER OPTION
+# PURLs are only honoured when the analyzer runs with:
+#   packageManagerOptions.SpdxDocumentFile.options.deduceOrtIdFromPurl: "true"
+# Without it ORT derives identifiers from the SPDX IDs instead and advisory
+# matching will not work.
+#
+# SOURCE AND SCOPE
+# Generated from the 21 thirdpartylibs.xml manifests at tag v4.1.22
+# (commit df1157bb845eabedd31989d6a1a6e18f638ff890). 96 declared entries
+# collapse to 79 distinct libraries after de-duplication -- Bootstrap alone is
+# declared 16 times, Font Awesome, ogv.js and Video.js twice each.
+#
+# CAVEATS -- READ BEFORE TRUSTING ADVISORY RESULTS
+#  1. Entries whose comment says NEEDS-REVIEW carry no PURL. They are
+#     inventoried but NOT monitored. Do not read their absence from advisory
+#     results as "no known vulnerabilities".
+#  2. A PURL asserts that the vendored code corresponds to that upstream
+#     release. Moodle patches vendored libraries. Where it has, advisory hits
+#     describe the upstream release, not necessarily the code in this tree.
+#  3. Versions are taken verbatim from thirdpartylibs.xml and are not
+#     independently verified against the vendored source.
+#  4. axe-core is vendored at lib/behat/axe, which the .ort.yml path excludes
+#     cover. SPDX-declared packages are not path-bound, so it will still be
+#     reported here. That inconsistency is intentional for now -- flag it if
+#     the first analyzer run confirms the package appears.
+#
+spdxVersion: SPDX-2.3
+dataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+name: moodle-vendored-libraries-4.1.22
+documentNamespace: https://github.com/willebot/moodle/spdx/moodle-vendored-libraries-4.1.22
+creationInfo:
+  created: '2026-08-23T00:00:00Z'
+  creators:
+  - 'Tool: generated-from-moodle-thirdpartylibs-xml'
+  - 'Organization: Double Open'
+  comment: Generated from the 21 thirdpartylibs.xml manifests in moodle/moodle at tag v4.1.22 (commit
+    df1157bb845eabedd31989d6a1a6e18f638ff890).
+packages:
+- SPDXID: SPDXRef-Project-moodle-vendored-libraries
+  name: moodle-vendored-libraries
+  versionInfo: 4.1.22
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Synthetic aggregation package. Groups the third-party libraries that Moodle 4.1.22 vendors
+    into its own source tree, as declared across the 21 thirdpartylibs.xml manifests. It is not a real
+    distributable artifact.
+- SPDXID: SPDXRef-Package-pkg-npm-lunr-2.3.8-6afc3b43
+  name: lunr - http://lunrjs.com
+  versionInfo: 2.3.8
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at admin/tool/componentlibrary/amd/src/lunr.js. Declared in thirdpartylibs.xml as
+    "lunr - http://lunrjs.com" version "2.3.8", licence "MIT".
+  homepage: https://github.com/olivernn/lunr.js
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/lunr@2.3.8
+- SPDXID: SPDXRef-Package-pkg-npm-jquery-eu-cookie-law-popup-1.1.3-1189507a
+  name: jQuery EU Cookie Law popups
+  versionInfo: 1.1.3
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at admin/tool/policy/amd/src/jquery-eu-cookie-law-popup.js. Declared in thirdpartylibs.xml
+    as "jQuery EU Cookie Law popups" version "1.1.3", licence "MIT".
+  homepage: https://github.com/wimagguc/jquery-eu-cookie-law-popup
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/jquery-eu-cookie-law-popup@1.1.3
+- SPDXID: SPDXRef-Package-pkg-composer-apereo-phpcas-1.6.0-563672c5
+  name: CAS
+  versionInfo: 1.6.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at auth/cas/CAS. Declared in thirdpartylibs.xml as "CAS" version "1.6.0", licence
+    "Apache 2.0".
+  homepage: https://github.com/apereo/phpCAS
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/apereo/phpcas@1.6.0
+- SPDXID: SPDXRef-Package-pkg-composer-mongodb-mongodb-1.15.0-e75cbcd4
+  name: MongoDB PHP Library
+  versionInfo: 1.15.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at cache/stores/mongodb/MongoDB. Declared in thirdpartylibs.xml as "MongoDB PHP Library"
+    version "1.15.0", licence "Apache 2.0".
+  homepage: https://github.com/mongodb/mongo-php-driver
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/mongodb/mongodb@1.15.0
+- SPDXID: SPDXRef-Package-pkg-composer-adodb-adodb-5.22.2-a2c366b8
+  name: AdoDB
+  versionInfo: 5.22.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/adodb. Declared in thirdpartylibs.xml as "AdoDB" version "5.22.2", licence
+    "BSD/LGPL 3-Clause/2.1+".
+  homepage: https://github.com/ADOdb/ADOdb
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/adodb/adodb@5.22.2
+- SPDXID: SPDXRef-Package-pkg-npm-webrtc-adapter-8.0.0-d20f4605
+  name: WebRTC adapter
+  versionInfo: 8.0.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/amd/src/adapter.js. Declared in thirdpartylibs.xml as "WebRTC adapter" version
+    "8.0.0", licence "BSD 3-Clause".
+  homepage: https://github.com/webrtc/adapter
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/webrtc-adapter@8.0.0
+- SPDXID: SPDXRef-Package-pkg-npm-chart.js-3.8.0-52a2daf9
+  name: Chart.js
+  versionInfo: 3.8.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/amd/src/chartjs-lazy.js. Declared in thirdpartylibs.xml as "Chart.js" version
+    "3.8.0", licence "MIT".
+  homepage: https://github.com/chartjs/Chart.js
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/chart.js@3.8.0
+- SPDXID: SPDXRef-Package-pkg-npm-loglevel-1.8.0-2e24b67e
+  name: loglevel.js
+  versionInfo: 1.8.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/amd/src/loglevel.js. Declared in thirdpartylibs.xml as "loglevel.js" version
+    "1.8.0", licence "MIT".
+  homepage: https://github.com/pimterry/loglevel/
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/loglevel@1.8.0
+- SPDXID: SPDXRef-Package-pkg-npm-mustache-4.2.0-292aa5a2
+  name: Mustache.js
+  versionInfo: 4.2.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/amd/src/mustache.js. Declared in thirdpartylibs.xml as "Mustache.js" version
+    "4.2.0", licence "MIT".
+  homepage: https://github.com/janl/mustache.js
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/mustache@4.2.0
+- SPDXID: SPDXRef-Package-pkg-npm-popper.js-1.12.6-f63cc145
+  name: Popper.js
+  versionInfo: v1.12.6
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/amd/src/popper.js. Declared in thirdpartylibs.xml as "Popper.js" version "v1.12.6",
+    licence "MIT".
+  homepage: https://github.com/floating-ui/floating-ui
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/popper.js@1.12.6
+- SPDXID: SPDXRef-Package-pkg-npm-axe-core-4.5.1-05017ea8
+  name: axe-core
+  versionInfo: 4.5.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MPL-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/behat/axe. Declared in thirdpartylibs.xml as "axe-core" version "4.5.1", licence
+    "MPL 2.0".
+  homepage: https://github.com/dequelabs/axe-core
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/axe-core@4.5.1
+- SPDXID: SPDXRef-Package-pkg-npm-js-beautify-1.14.6-0892f9af
+  name: jsbeautify
+  versionInfo: 1.14.6
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/editor/atto/plugins/html/yui/src/beautify. Declared in thirdpartylibs.xml as
+    "jsbeautify" version "1.14.6", licence "MIT".
+  homepage: https://github.com/beautify-web/js-beautify
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/js-beautify@1.14.6
+- SPDXID: SPDXRef-Package-pkg-npm-codemirror-5.65.9-f100fead
+  name: codemirror
+  versionInfo: 5.65.9
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/editor/atto/plugins/html/yui/src/codemirror. Declared in thirdpartylibs.xml
+    as "codemirror" version "5.65.9", licence "MIT".
+  homepage: https://github.com/codemirror/codemirror5
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/codemirror@5.65.9
+- SPDXID: SPDXRef-Package-pkg-npm-rangy-1.3.0-7460fc27
+  name: Rangy
+  versionInfo: 1.3.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/editor/atto/yui/src/rangy/js/*.*. Declared in thirdpartylibs.xml as "Rangy"
+    version "1.3.0", licence "MIT".
+  homepage: https://github.com/timdown/rangy
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/rangy@1.3.0
+- SPDXID: SPDXRef-Package-pkg-npm-tinymce-6.2.0-9a5c9738
+  name: Tiny
+  versionInfo: 6.2.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/editor/tiny/js/tinymce. Declared in thirdpartylibs.xml as "Tiny" version "6.2.0",
+    licence "MIT".
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/tinymce@6.2.0
+- SPDXID: SPDXRef-Package-pkg-npm-font-awesome-4.7.0-9b2039ea
+  name: Font Awesome - http://fontawesome.io
+  versionInfo: 4.7.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: OFL-1.1
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/fonts, theme/boost/scss/fontawesome. Declared in thirdpartylibs.xml as "Font
+    Awesome - http://fontawesome.io" version "4.7.0", licence "SIL OFL 1.1".
+  homepage: https://github.com/FortAwesome/Font-Awesome
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/font-awesome@4.7.0
+- SPDXID: SPDXRef-Package-pkg-composer-google-apiclient-1.1.7-9ffdb078
+  name: Google APIs
+  versionInfo: 1.1.7
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/google. Declared in thirdpartylibs.xml as "Google APIs" version "1.1.7", licence
+    "Apache 2.0".
+  homepage: https://github.com/googleapis/google-api-php-client
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/google/apiclient@1.1.7
+- SPDXID: SPDXRef-Package-pkg-composer-html2text-html2text-4.3.1-ddf7f00f
+  name: HTML2Text
+  versionInfo: 4.3.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/html2text. Declared in thirdpartylibs.xml as "HTML2Text" version "4.3.1", licence
+    "GPL 2.0+".
+  homepage: https://github.com/mtibben/html2text
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/html2text/html2text@4.3.1
+- SPDXID: SPDXRef-Package-pkg-composer-ezyang-htmlpurifier-4.16.0-fbe28116
+  name: HTML Purifier
+  versionInfo: 4.16.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: LGPL-2.1-or-later
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/htmlpurifier. Declared in thirdpartylibs.xml as "HTML Purifier" version "4.16.0",
+    licence "LGPL 2.1+".
+  homepage: https://github.com/ezyang/htmlpurifier
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/ezyang/htmlpurifier@4.16.0
+- SPDXID: SPDXRef-Package-pkg-composer-psr-http-message-1.0.1-3c50e8cd
+  name: http-message
+  versionInfo: 1.0.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/http-message. Declared in thirdpartylibs.xml as "http-message" version "1.0.1",
+    licence "MIT".
+  homepage: https://github.com/php-fig/http-message
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/psr/http-message@1.0.1
+- SPDXID: SPDXRef-Package-pkg-npm-jquery-3.6.1-8cd037c3
+  name: jQuery
+  versionInfo: 3.6.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/jquery. Declared in thirdpartylibs.xml as "jQuery" version "3.6.1", licence
+    "MIT".
+  homepage: https://github.com/jquery/jquery
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/jquery@3.6.1
+- SPDXID: SPDXRef-Package-pkg-npm-jquery-ui-1.13.2-42a75592
+  name: jQuery UI
+  versionInfo: 1.13.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/jquery. Declared in thirdpartylibs.xml as "jQuery UI" version "1.13.2", licence
+    "MIT".
+  homepage: https://github.com/jquery/jquery-ui
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/jquery-ui@1.13.2
+- SPDXID: SPDXRef-Package-pkg-composer-michelf-php-markdown-2.0.0-d484462f
+  name: Markdown
+  versionInfo: 2.0.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/markdown. Declared in thirdpartylibs.xml as "Markdown" version "2.0.0", licence
+    "BSD".
+  homepage: https://github.com/michelf/php-markdown
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/michelf/php-markdown@2.0.0
+- SPDXID: SPDXRef-Package-pkg-composer-geoip2-geoip2-2.11.0-ae99a9c4
+  name: GeoIP2 PHP API
+  versionInfo: 2.11.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/maxmind/GeoIp2. Declared in thirdpartylibs.xml as "GeoIP2 PHP API" version
+    "2.11.0", licence "Apache 2.0".
+  homepage: https://github.com/maxmind/GeoIP2-php
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/geoip2/geoip2@2.11.0
+- SPDXID: SPDXRef-Package-pkg-composer-maxmind-db-reader-1.11.0-38e75645
+  name: MaxMind DB Reader API
+  versionInfo: 1.11.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/maxmind/MaxMind. Declared in thirdpartylibs.xml as "MaxMind DB Reader API"
+    version "1.11.0", licence "Apache 2.0".
+  homepage: https://github.com/maxmind/MaxMind-DB-Reader-php/
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/maxmind-db/reader@1.11.0
+- SPDXID: SPDXRef-Package-pkg-composer-matthiasmullie-minify-1.3.69-79deba19
+  name: MatthiasMullie\Minify
+  versionInfo: 1.3.69
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/minify/matthiasmullie-minify. Declared in thirdpartylibs.xml as "MatthiasMullie\Minify"
+    version "1.3.69", licence "MIT".
+  homepage: https://github.com/matthiasmullie/minify
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/matthiasmullie/minify@1.3.69
+- SPDXID: SPDXRef-Package-pkg-composer-matthiasmullie-path-converter-1.1.3-723c46d5
+  name: MatthiasMullie\PathConverter
+  versionInfo: 1.1.3
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/minify/matthiasmullie-pathconverter. Declared in thirdpartylibs.xml as "MatthiasMullie\PathConverter"
+    version "1.1.3", licence "MIT".
+  homepage: https://github.com/matthiasmullie/path-converter
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/matthiasmullie/path-converter@1.1.3
+- SPDXID: SPDXRef-Package-pkg-composer-php-ai-php-ml-0.9.0-ee67cac3
+  name: PHP-ML
+  versionInfo: 0.9.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/mlbackend/php/phpml. Declared in thirdpartylibs.xml as "PHP-ML" version "0.9.0",
+    licence "MIT".
+  homepage: https://gitlab.com/php-ai/php-ml
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/php-ai/php-ml@0.9.0
+- SPDXID: SPDXRef-Package-pkg-composer-mustache-mustache-2.14.2-da964c69
+  name: Mustache
+  versionInfo: 2.14.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/mustache. Declared in thirdpartylibs.xml as "Mustache" version "2.14.2", licence
+    "MIT".
+  homepage: https://github.com/bobthecow/mustache.php
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/mustache/mustache@2.14.2
+- SPDXID: SPDXRef-Package-pkg-composer-sabberworm-php-css-parser-8.4.0-4992a8a8
+  name: PHP-CSS-Parser
+  versionInfo: 8.4.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/php-css-parser. Declared in thirdpartylibs.xml as "PHP-CSS-Parser" version
+    "8.4.0", licence "MIT".
+  homepage: https://github.com/sabberworm/PHP-CSS-Parser
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/sabberworm/php-css-parser@8.4.0
+- SPDXID: SPDXRef-Package-pkg-composer-myclabs-php-enum-1.8.3-1320699f
+  name: php-enum
+  versionInfo: 1.8.3
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/php-enum. Declared in thirdpartylibs.xml as "php-enum" version "1.8.3", licence
+    "MIT".
+  homepage: https://github.com/myclabs/php-enum
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/myclabs/php-enum@1.8.3
+- SPDXID: SPDXRef-Package-lib-php-jwt-A-simple-library-to-encode-and-decode-JSON-Web-Tokens--JWT--in-PHP-77ccf4de
+  name: php-jwt
+  versionInfo: 6.3.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: BSD-3-Clause
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/php-jwt. Declared in thirdpartylibs.xml as "php-jwt" version "6.3.0", licence
+    "BSD 3-Clause".
+  homepage: https://github.com/firebase/php-jwt
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/firebase/php-jwt@6.3.0
+- SPDXID: SPDXRef-Package-pkg-composer-phpmailer-phpmailer-6.6.5-685e5307
+  name: PHPMailer
+  versionInfo: 6.6.5
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/phpmailer. Declared in thirdpartylibs.xml as "PHPMailer" version "6.6.5", licence
+    "LGPL 2.1".
+  homepage: https://github.com/PHPMailer/PHPMailer
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/phpmailer/phpmailer@6.6.5
+- SPDXID: SPDXRef-Package-pkg-composer-phpoffice-phpspreadsheet-1.25.2-b0013959
+  name: PhpSpreadsheet
+  versionInfo: 1.25.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/phpspreadsheet. Declared in thirdpartylibs.xml as "PhpSpreadsheet" version
+    "1.25.2", licence "MIT".
+  homepage: https://github.com/PHPOffice/PhpSpreadsheet
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/phpoffice/phpspreadsheet@1.25.2
+- SPDXID: SPDXRef-Package-pkg-composer-phpxmlrpc-phpxmlrpc-4.8.1-0e17f61c
+  name: phpxmlrpc
+  versionInfo: 4.8.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/phpxmlrpc. Declared in thirdpartylibs.xml as "phpxmlrpc" version "4.8.1", licence
+    "BSD 3-Clause".
+  homepage: https://github.com/gggeek/phpxmlrpc
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/phpxmlrpc/phpxmlrpc@4.8.1
+- SPDXID: SPDXRef-Package-pkg-npm-regenerator-runtime-0.13.7-8c88a8ce
+  name: regenerator-runtime
+  versionInfo: 0.13.7
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/polyfills. Declared in thirdpartylibs.xml as "regenerator-runtime" version
+    "0.13.7", licence "MIT".
+  homepage: https://github.com/facebook/regenerator/
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/regenerator-runtime@0.13.7
+- SPDXID: SPDXRef-Package-pkg-npm-core-js-bundle-3.15.0-3a3ce4a2
+  name: core-js-bundle
+  versionInfo: 3.15.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/polyfills. Declared in thirdpartylibs.xml as "core-js-bundle" version "3.15.0",
+    licence "MIT".
+  homepage: https://github.com/zloirock/core-js
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/core-js-bundle@3.15.0
+- SPDXID: SPDXRef-Package-pkg-npm-mdn-polyfills-5.20.0-ef41482d
+  name: mdn-polyfill
+  versionInfo: 5.20.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/polyfills. Declared in thirdpartylibs.xml as "mdn-polyfill" version "5.20.0",
+    licence "MIT".
+  homepage: https://github.com/msn0/mdn-polyfills
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/mdn-polyfills@5.20.0
+- SPDXID: SPDXRef-Package-pkg-npm-url-polyfill-1.1.12-d46297cb
+  name: url-polyfill
+  versionInfo: 1.1.12
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/polyfills. Declared in thirdpartylibs.xml as "url-polyfill" version "1.1.12",
+    licence "MIT".
+  homepage: https://github.com/lifaon74/url-polyfill
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/url-polyfill@1.1.12
+- SPDXID: SPDXRef-Package-pkg-npm-requirejs-2.3.7-05934d04
+  name: RequireJS
+  versionInfo: 2.3.7
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/requirejs. Declared in thirdpartylibs.xml as "RequireJS" version "2.3.7", licence
+    "MIT".
+  homepage: https://github.com/requirejs/requirejs
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/requirejs@2.3.7
+- SPDXID: SPDXRef-Package-pkg-composer-scssphp-scssphp-1.11.0-8ce84546
+  name: scssphp
+  versionInfo: 1.11.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/scssphp. Declared in thirdpartylibs.xml as "scssphp" version "1.11.0", licence
+    "MIT".
+  homepage: https://github.com/scssphp/scssphp/
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/scssphp/scssphp@1.11.0
+- SPDXID: SPDXRef-Package-pkg-composer-simplepie-simplepie-1.6.0-6d28827b
+  name: SimplePie
+  versionInfo: 1.6.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/simplepie. Declared in thirdpartylibs.xml as "SimplePie" version "1.6.0", licence
+    "BSD".
+  homepage: https://github.com/simplepie/simplepie
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/simplepie/simplepie@1.6.0
+- SPDXID: SPDXRef-Package-pkg-composer-box-spout-3.3.0-fbc608be
+  name: Spout
+  versionInfo: 3.3.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/spout. Declared in thirdpartylibs.xml as "Spout" version "3.3.0", licence "Apache
+    2.0".
+  homepage: https://github.com/box/spout/
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/box/spout@3.3.0
+- SPDXID: SPDXRef-Package-pkg-composer-tecnickcom-tcpdf-6.5.0-cdbd145b
+  name: TCPDF
+  versionInfo: 6.5.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: LGPL-3.0-only
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/tcpdf. Declared in thirdpartylibs.xml as "TCPDF" version "6.5.0", licence "LGPL
+    3.0-only".
+  homepage: https://github.com/tecnickcom/TCPDF
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/tecnickcom/tcpdf@6.5.0
+- SPDXID: SPDXRef-Package-pkg-npm-yui-3.17.2-24ab428b
+  name: YUI
+  versionInfo: 3.17.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/yuilib. Declared in thirdpartylibs.xml as "YUI" version "3.17.2", licence "BSD".
+  homepage: https://github.com/yui/yui3
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/yui@3.17.2
+- SPDXID: SPDXRef-Package-pkg-composer-maennchen-zipstream-php-2.2.0-5448a4a8
+  name: ZipStream-PHP
+  versionInfo: 2.2.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at lib/zipstream. Declared in thirdpartylibs.xml as "ZipStream-PHP" version "2.2.0",
+    licence "MIT".
+  homepage: https://github.com/maennchen/ZipStream-PHP
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/maennchen/zipstream-php@2.2.0
+- SPDXID: SPDXRef-Package-pkg-npm-videojs-youtube-2.6.1-6d028615
+  name: videojs-youtube
+  versionInfo: 2.6.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at media/player/videojs/amd/src/Youtube-lazy.js. Declared in thirdpartylibs.xml as
+    "videojs-youtube" version "2.6.1", licence "MIT".
+  homepage: https://github.com/videojs/videojs-youtube
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/videojs-youtube@2.6.1
+- SPDXID: SPDXRef-Package-pkg-npm-ogv-1.8.4-e43457c6
+  name: ogv.js
+  versionInfo: 1.8.4
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at media/player/videojs/amd/src/local/ogv/ogv.js, media/player/videojs/ogvjs. Declared
+    in thirdpartylibs.xml as "ogv.js" version "1.8.4", licence "MIT".
+  homepage: https://github.com/brion/ogv.js/
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/ogv@1.8.4
+- SPDXID: SPDXRef-Package-pkg-npm-video.js-7.20.3-8eef117d
+  name: VideoJS
+  versionInfo: 7.20.3
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: Vendored at media/player/videojs/amd/src/video-lazy.js, media/player/videojs/videojs. Declared
+    in thirdpartylibs.xml as "VideoJS" version "7.20.3", licence "Apache 2.0".
+  homepage: https://github.com/videojs/video.js
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/video.js@7.20.3
+- SPDXID: SPDXRef-Package-pkg-npm-videojs-ogvjs-0.1.2-f4983836
+  name: ogv.js Tech plugin for Video.JS
+  versionInfo: 0.1.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at media/player/videojs/amd/src/videojs-ogvjs-lazy.js. Declared in thirdpartylibs.xml
+    as "ogv.js Tech plugin for Video.JS" version "0.1.2", licence "MIT".
+  homepage: https://github.com/HuongNV13/videojs-ogvjs
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/videojs-ogvjs@0.1.2
+- SPDXID: SPDXRef-Package-pkg-composer-setasign-fpdi-2.3.6-12be3c9f
+  name: FPDI
+  versionInfo: 2.3.6
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at mod/assign/feedback/editpdf/fpdi. Declared in thirdpartylibs.xml as "FPDI" version
+    "2.3.6", licence "MIT".
+  homepage: https://github.com/Setasign/FPDI
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:composer/setasign/fpdi@2.3.6
+- SPDXID: SPDXRef-Package-pkg-npm-bootstrap-4.6.2-54d7367e
+  name: Twitter Bootstrap
+  versionInfo: 4.6.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: Vendored at theme/boost/amd/src/bootstrap/alert.js, theme/boost/amd/src/bootstrap/button.js,
+    theme/boost/amd/src/bootstrap/carousel.js, theme/boost/amd/src/bootstrap/collapse.js, theme/boost/amd/src/bootstrap/dropdown.js,
+    theme/boost/amd/src/bootstrap/modal.js, theme/boost/amd/src/bootstrap/popover.js, theme/boost/amd/src/bootstrap/scrollspy.js,
+    theme/boost/amd/src/bootstrap/tab.js, theme/boost/amd/src/bootstrap/toast.js, theme/boost/amd/src/bootstrap/tools/sanitizer.js,
+    theme/boost/amd/src/bootstrap/tooltip.js, theme/boost/amd/src/bootstrap/util.js, theme/boost/amd/src/index.js,
+    theme/boost/scss/bootstrap. Declared in thirdpartylibs.xml as "Twitter Bootstrap" version "4.6.2",
+    licence "MIT".
+  homepage: https://github.com/twbs/bootstrap
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceType: purl
+    referenceLocator: pkg:npm/bootstrap@4.6.2
+- SPDXID: SPDXRef-Package-enrol-lti-ims-blti-IMS-BLTI-579bd734
+  name: IMS-BLTI
+  versionInfo: '1.0'
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at enrol/lti/ims-blti. Declared in thirdpartylibs.xml as "IMS-BLTI" version "1.0",
+    licence "MIT". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/jfederico/ims-dev
+- SPDXID: SPDXRef-Package-filter-algebra-AlgParser.pm-WeBWorK-f0338060
+  name: WeBWorK
+  versionInfo: 2.4.9+
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at filter/algebra/AlgParser.pm. Declared in thirdpartylibs.xml as "WeBWorK" version
+    "2.4.9+", licence "GPL 2.0+". NEEDS-REVIEW: no confident package-registry coordinate could be derived,
+    so no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+- SPDXID: SPDXRef-Package-filter-tex-mimetex.--mimeTeX-3a940ea7
+  name: mimeTeX
+  versionInfo: '1.77'
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at filter/tex/mimetex.*. Declared in thirdpartylibs.xml as "mimeTeX" version "1.77",
+    licence "GPL 3.0+". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no
+    PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/icaoberg/mimetex
+- SPDXID: SPDXRef-Package-h5p-h5plib-v124-joubel-core-h5p-php-library-a126bdc0
+  name: h5p-php-library
+  versionInfo: moodle-1.22.4
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at h5p/h5plib/v124/joubel/core. Declared in thirdpartylibs.xml as "h5p-php-library"
+    version "moodle-1.22.4", licence "GPL 3.0+". NEEDS-REVIEW: no confident package-registry coordinate
+    could be derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory
+    matching.'
+  homepage: https://github.com/h5p/h5p-php-library/
+- SPDXID: SPDXRef-Package-h5p-h5plib-v124-joubel-editor-h5p-editor-php-library-4efb7081
+  name: h5p-editor-php-library
+  versionInfo: moodle-1.22.4
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at h5p/h5plib/v124/joubel/editor. Declared in thirdpartylibs.xml as "h5p-editor-php-library"
+    version "moodle-1.22.4", licence "GPL 3.0+". NEEDS-REVIEW: no confident package-registry coordinate
+    could be derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory
+    matching.'
+  homepage: https://github.com/h5p/h5p-editor-php-library/
+- SPDXID: SPDXRef-Package-lib-amd-src-truncate.js-Truncate.js-ab4b69db
+  name: Truncate.js
+  versionInfo: 0.0.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/amd/src/truncate.js. Declared in thirdpartylibs.xml as "Truncate.js" version
+    "0.0.1", licence "MIT". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so
+    no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/pathable/truncate
+- SPDXID: SPDXRef-Package-lib-bennu-Bennu-640e2411
+  name: Bennu
+  versionInfo: 0.2-custom
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: LGPL-2.1-or-later
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/bennu. Declared in thirdpartylibs.xml as "Bennu" version "0.2-custom", licence
+    "LGPL 2.1+". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL is
+    asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://sourceforge.net/projects/bennu/
+- SPDXID: SPDXRef-Package-lib-editor-tinymce-plugins-pdw-tinymce-PDW-Toolbar-Toggle-9031fb9e
+  name: PDW Toolbar Toggle
+  versionInfo: '1.2'
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/editor/tinymce/plugins/pdw/tinymce. Declared in thirdpartylibs.xml as "PDW
+    Toolbar Toggle" version "1.2", licence "MIT". NEEDS-REVIEW: no confident package-registry coordinate
+    could be derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory
+    matching.'
+  homepage: https://github.com/GuidoNeele/PDW-Toggle-Toolbars-TinyMCE
+- SPDXID: SPDXRef-Package-lib-editor-tinymce-plugins-spellchecker-rpc.php-TinyMCE-spellchecker-d2255c6f
+  name: TinyMCE spellchecker
+  versionInfo: 2.0.6.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: LGPL-2.1-or-later
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/editor/tinymce/plugins/spellchecker/rpc.php. Declared in thirdpartylibs.xml
+    as "TinyMCE spellchecker" version "2.0.6.1", licence "LGPL 2.1+". NEEDS-REVIEW: no confident package-registry
+    coordinate could be derived, so no PURL is asserted. This library is inventoried but NOT covered by
+    advisory matching.'
+  homepage: https://github.com/tinymce/tinymce_spellchecker_php
+- SPDXID: SPDXRef-Package-lib-editor-tinymce-tiny-mce-TinyMCE-9b74e499
+  name: TinyMCE
+  versionInfo: 3.5.11
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: LGPL-2.1-or-later
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/editor/tinymce/tiny_mce. Declared in thirdpartylibs.xml as "TinyMCE" version
+    "3.5.11", licence "LGPL 2.1+". NEEDS-REVIEW: no confident package-registry coordinate could be derived,
+    so no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/tinymce/tinymce
+- SPDXID: SPDXRef-Package-lib-emoji-data-Emoji-data-addf9093
+  name: Emoji data
+  versionInfo: 14.0.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/emoji-data. Declared in thirdpartylibs.xml as "Emoji data" version "14.0.1",
+    licence "MIT". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/iamcal/emoji-data/
+- SPDXID: SPDXRef-Package-lib-evalmath-EvalMath-8f7c45f8
+  name: EvalMath
+  versionInfo: 1.0.0
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/evalmath. Declared in thirdpartylibs.xml as "EvalMath" version "1.0.0", licence
+    "BSD". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL is asserted.
+    This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/dbojdo/eval-math
+- SPDXID: SPDXRef-Package-lib-geopattern-php-GeoPattern-e4bbd8a4
+  name: GeoPattern
+  versionInfo: 1.1.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/geopattern-php. Declared in thirdpartylibs.xml as "GeoPattern" version "1.1.2",
+    licence "MIT". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/RedeyeGroup/geopattern-php
+- SPDXID: SPDXRef-Package-lib-graphlib.php-Graph-Class-27feae25
+  name: Graph Class
+  versionInfo: 1.6.3
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/graphlib.php. Declared in thirdpartylibs.xml as "Graph Class" version "1.6.3",
+    licence "GPL". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+- SPDXID: SPDXRef-Package-lib-horde-Horde-9d7a63d0
+  name: Horde
+  versionInfo: 5.2.23
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/horde. Declared in thirdpartylibs.xml as "Horde" version "5.2.23", licence
+    "LGPL/BSD 2.1". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/horde/base
+- SPDXID: SPDXRef-Package-lib-lti1p3-LTI-1.3-Tool-Library-7b911ecd
+  name: LTI 1.3 Tool Library
+  versionInfo: 5.2.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/lti1p3. Declared in thirdpartylibs.xml as "LTI 1.3 Tool Library" version "5.2.1",
+    licence "Apache 2.0". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so
+    no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/packbackbooks/lti-1-3-php-library
+- SPDXID: SPDXRef-Package-lib-ltiprovider-LTI-Tool-Provider-Library-PHP-732ab0ff
+  name: LTI Tool Provider Library PHP
+  versionInfo: 3.0.2
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/ltiprovider. Declared in thirdpartylibs.xml as "LTI Tool Provider Library
+    PHP" version "3.0.2", licence "Apache 2.0". NEEDS-REVIEW: no confident package-registry coordinate
+    could be derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory
+    matching.'
+  homepage: https://github.com/1EdTech/LTI-Tool-Provider-Library-PHP
+- SPDXID: SPDXRef-Package-lib-pear-HTML-Common.php-Pear-HTML-Common-32a01375
+  name: Pear_HTML_Common
+  versionInfo: '1.7'
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/pear/HTML/Common.php. Declared in thirdpartylibs.xml as "Pear_HTML_Common"
+    version "1.7", licence "PHP 2.0". NEEDS-REVIEW: no confident package-registry coordinate could be
+    derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: http://pear.php.net/package/HTML_Common
+- SPDXID: SPDXRef-Package-lib-pear-HTML-QuickForm-Pear-HTML-QuickForm-49aaa80f
+  name: Pear_HTML_QuickForm
+  versionInfo: '2.0'
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/pear/HTML/QuickForm. Declared in thirdpartylibs.xml as "Pear_HTML_QuickForm"
+    version "2.0", licence "PHP 2.0". NEEDS-REVIEW: no confident package-registry coordinate could be
+    derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://pear.php.net/package/HTML_Quickform
+- SPDXID: SPDXRef-Package-lib-pear-HTML-QuickForm.php-Pear-HTML-QuickForm.php-54a42972
+  name: Pear_HTML_QuickForm.php
+  versionInfo: '2.0'
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/pear/HTML/QuickForm.php. Declared in thirdpartylibs.xml as "Pear_HTML_QuickForm.php"
+    version "2.0", licence "PHP 2.0". NEEDS-REVIEW: no confident package-registry coordinate could be
+    derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://pear.php.net/package/HTML_Quickform
+- SPDXID: SPDXRef-Package-lib-pear-PEAR.php-Pear.php-0fe936a0
+  name: Pear.php
+  versionInfo: 1.4.5
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/pear/PEAR.php. Declared in thirdpartylibs.xml as "Pear.php" version "1.4.5",
+    licence "PHP 3.0". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no
+    PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://pear.php.net/package/PEAR
+- SPDXID: SPDXRef-Package-lib-plist-plist-d5ca93f8
+  name: plist
+  versionInfo: 2.0.3
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/plist. Declared in thirdpartylibs.xml as "plist" version "2.0.3", licence
+    "MIT". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL is asserted.
+    This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/TECLIB/CFPropertyList
+- SPDXID: SPDXRef-Package-lib-rtlcss-RTLCSS-for-PHP-4752e86c
+  name: RTLCSS for PHP
+  versionInfo: 1.0.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: MIT
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/rtlcss. Declared in thirdpartylibs.xml as "RTLCSS for PHP" version "1.0.1",
+    licence "MIT". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/moodlehq/rtlcss-php
+- SPDXID: SPDXRef-Package-lib-validateurlsyntax.php-validateUrlSyntax-6ec3899e
+  name: validateUrlSyntax
+  versionInfo: NOASSERTION
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/validateurlsyntax.php. Declared in thirdpartylibs.xml as "validateUrlSyntax"
+    version "(none)", licence "GPL 2.0+". NEEDS-REVIEW: no confident package-registry coordinate could
+    be derived, so no PURL is asserted. This library is inventoried but NOT covered by advisory matching.'
+- SPDXID: SPDXRef-Package-lib-xhprof-XHProf-2770760b
+  name: XHProf
+  versionInfo: 2.3.5
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: Apache-2.0
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/xhprof. Declared in thirdpartylibs.xml as "XHProf" version "2.3.5", licence
+    "Apache 2.0". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/longxinH/xhprof
+- SPDXID: SPDXRef-Package-lib-yuilib-gallery-YUI-Gallery-4f2d1662
+  name: YUI Gallery
+  versionInfo: gallery-2013.10.02-20-26
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at lib/yuilib/gallery. Declared in thirdpartylibs.xml as "YUI Gallery" version "gallery-2013.10.02-20-26",
+    licence "BSD". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/yui/yui3-gallery
+- SPDXID: SPDXRef-Package-repository-s3-S3.php-S3-f9f9da1b
+  name: S3
+  versionInfo: 0.5.1
+  downloadLocation: NOASSERTION
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  copyrightText: NOASSERTION
+  comment: 'Vendored at repository/s3/S3.php. Declared in thirdpartylibs.xml as "S3" version "0.5.1",
+    licence "BSD". NEEDS-REVIEW: no confident package-registry coordinate could be derived, so no PURL
+    is asserted. This library is inventoried but NOT covered by advisory matching.'
+  homepage: https://github.com/tpyo/amazon-s3-php-class
+relationships:
+- spdxElementId: SPDXRef-DOCUMENT
+  relationshipType: DESCRIBES
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-lunr-2.3.8-6afc3b43
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-jquery-eu-cookie-law-popup-1.1.3-1189507a
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-apereo-phpcas-1.6.0-563672c5
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-mongodb-mongodb-1.15.0-e75cbcd4
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-adodb-adodb-5.22.2-a2c366b8
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-webrtc-adapter-8.0.0-d20f4605
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-chart.js-3.8.0-52a2daf9
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-loglevel-1.8.0-2e24b67e
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-mustache-4.2.0-292aa5a2
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-popper.js-1.12.6-f63cc145
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-axe-core-4.5.1-05017ea8
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-js-beautify-1.14.6-0892f9af
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-codemirror-5.65.9-f100fead
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-rangy-1.3.0-7460fc27
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-tinymce-6.2.0-9a5c9738
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-font-awesome-4.7.0-9b2039ea
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-google-apiclient-1.1.7-9ffdb078
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-html2text-html2text-4.3.1-ddf7f00f
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-ezyang-htmlpurifier-4.16.0-fbe28116
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-psr-http-message-1.0.1-3c50e8cd
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-jquery-3.6.1-8cd037c3
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-jquery-ui-1.13.2-42a75592
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-michelf-php-markdown-2.0.0-d484462f
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-geoip2-geoip2-2.11.0-ae99a9c4
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-maxmind-db-reader-1.11.0-38e75645
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-matthiasmullie-minify-1.3.69-79deba19
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-matthiasmullie-path-converter-1.1.3-723c46d5
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-php-ai-php-ml-0.9.0-ee67cac3
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-mustache-mustache-2.14.2-da964c69
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-sabberworm-php-css-parser-8.4.0-4992a8a8
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-myclabs-php-enum-1.8.3-1320699f
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-php-jwt-A-simple-library-to-encode-and-decode-JSON-Web-Tokens--JWT--in-PHP-77ccf4de
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-phpmailer-phpmailer-6.6.5-685e5307
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-phpoffice-phpspreadsheet-1.25.2-b0013959
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-phpxmlrpc-phpxmlrpc-4.8.1-0e17f61c
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-regenerator-runtime-0.13.7-8c88a8ce
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-core-js-bundle-3.15.0-3a3ce4a2
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-mdn-polyfills-5.20.0-ef41482d
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-url-polyfill-1.1.12-d46297cb
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-requirejs-2.3.7-05934d04
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-scssphp-scssphp-1.11.0-8ce84546
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-simplepie-simplepie-1.6.0-6d28827b
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-box-spout-3.3.0-fbc608be
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-tecnickcom-tcpdf-6.5.0-cdbd145b
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-yui-3.17.2-24ab428b
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-maennchen-zipstream-php-2.2.0-5448a4a8
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-videojs-youtube-2.6.1-6d028615
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-ogv-1.8.4-e43457c6
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-video.js-7.20.3-8eef117d
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-videojs-ogvjs-0.1.2-f4983836
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-composer-setasign-fpdi-2.3.6-12be3c9f
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-pkg-npm-bootstrap-4.6.2-54d7367e
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-enrol-lti-ims-blti-IMS-BLTI-579bd734
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-filter-algebra-AlgParser.pm-WeBWorK-f0338060
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-filter-tex-mimetex.--mimeTeX-3a940ea7
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-h5p-h5plib-v124-joubel-core-h5p-php-library-a126bdc0
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-h5p-h5plib-v124-joubel-editor-h5p-editor-php-library-4efb7081
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-amd-src-truncate.js-Truncate.js-ab4b69db
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-bennu-Bennu-640e2411
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-editor-tinymce-plugins-pdw-tinymce-PDW-Toolbar-Toggle-9031fb9e
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-editor-tinymce-plugins-spellchecker-rpc.php-TinyMCE-spellchecker-d2255c6f
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-editor-tinymce-tiny-mce-TinyMCE-9b74e499
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-emoji-data-Emoji-data-addf9093
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-evalmath-EvalMath-8f7c45f8
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-geopattern-php-GeoPattern-e4bbd8a4
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-graphlib.php-Graph-Class-27feae25
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-horde-Horde-9d7a63d0
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-lti1p3-LTI-1.3-Tool-Library-7b911ecd
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-ltiprovider-LTI-Tool-Provider-Library-PHP-732ab0ff
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-pear-HTML-Common.php-Pear-HTML-Common-32a01375
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-pear-HTML-QuickForm-Pear-HTML-QuickForm-49aaa80f
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-pear-HTML-QuickForm.php-Pear-HTML-QuickForm.php-54a42972
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-pear-PEAR.php-Pear.php-0fe936a0
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-plist-plist-d5ca93f8
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-rtlcss-RTLCSS-for-PHP-4752e86c
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-validateurlsyntax.php-validateUrlSyntax-6ec3899e
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-xhprof-XHProf-2770760b
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-lib-yuilib-gallery-YUI-Gallery-4f2d1662
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
+- spdxElementId: SPDXRef-Package-repository-s3-S3.php-S3-f9f9da1b
+  relationshipType: DEPENDENCY_OF
+  relatedSpdxElement: SPDXRef-Project-moodle-vendored-libraries
